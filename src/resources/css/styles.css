@@ -5,17 +5,17 @@ html, body {
   margin: 0; }
 
 a {
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s; }
+  -webkit-transition: all .5s;
+  transition: all .5s; }
 
 dl {
   margin: 10px 0;
   background: #f3f4f5;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s; }
+  -webkit-transition: all .5s;
+  transition: all .5s; }
   dl:hover {
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
+    -webkit-transition: all .5s;
+    transition: all .5s;
     background: #F11E22;
     color: white; }
   dl img {
@@ -72,12 +72,12 @@ footer {
   .filmsContainer .upcomingFilmsBox:hover {
     cursor: pointer; }
     .filmsContainer .upcomingFilmsBox:hover img {
-      -webkit-transition: all 0.5s;
-      transition: all 0.5s;
+      -webkit-transition: all .5s;
+      transition: all .5s;
       border-color: red; }
     .filmsContainer .upcomingFilmsBox:hover h1 {
-      -webkit-transition: all 0.5s;
-      transition: all 0.5s;
+      -webkit-transition: all .5s;
+      transition: all .5s;
       color: red; }
 
 .interiorPage {
@@ -123,3 +123,5 @@ footer {
     color: #989898;
     font-style: italic;
     text-align: center; }
+
+/*# sourceMappingURL=styles.css.map */
