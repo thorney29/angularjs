@@ -28,9 +28,16 @@
 				<ul class="nav navbar-nav">
 					<li data-ng-class="{active: isActive('/')}"><a href="#/films" title="Films">Films</a></li>
 					<li data-ng-class="{active: isActive('/')}"><a href="#/characters" title="Characters">Characters</a></li>
-					<li data-ng-class="{active: isActive('/')}"><a href="#/phases" title="Phases">Phases</a></li>
+					<!-- Here begins the first-menu-item to have a dropdown submenu. We add the class dropdown to the li container, a toggle behavior in the anchor tag and define its role as a button to expand.-->
+					<li class="dropdown">
+						<a hef="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded title="Phases">Phases</a>
+						<ul><!-- Here are the menus as listed in the dropdown menu with the links-->
+							<li><a href="#/phase1" title="Phase One">Phase One</a></li>
+							<li><a href="#/phase2" title="Phase Two">Phase Two</a></li>
+							<li><a href="#/phase3" title="Phase Three">Phase Three</a></li>
+						</ul>
+					</li>
 				</ul>
-
 				<!-- right navbar -->
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="#" title="Contact">Contact</a></li>
