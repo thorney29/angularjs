@@ -12,7 +12,7 @@
 </head>
 <body>
 
-	<div class="mainContainer" data-ng-app="RavensApp">
+	<!-- <div class="mainContainer" data-ng-app="RavensApp">
 		<h1>Baltimore Ravens</h1>
 
 		<input type="text" data-ng-model="search.$">
@@ -31,6 +31,29 @@
 						<td>{{player.name}}</td>
 						<td>{{player.position}}</td>
 						<td>{{player.number}}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>-->
+		<div class="mainContainer" data-ng-app="mapApp">
+		<h1>Portland Streetcar Bars</h1>
+
+		<input type="text" data-ng-model="search.$">
+
+		<div data-ng-controller="mapCtrl">
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th>Bar</th>
+						<th>Bar Address</th>
+						<th>Bar URL</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr data-ng-repeat="bar in bars | filter:search | orderBy:'name' | limitTo: 20">
+						<td>{{bar.name}}</td>
+						<td>{{bar.address }}</td>
+						<td>{{bar.url}}</td>
 					</tr>
 				</tbody>
 			</table>
