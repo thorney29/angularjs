@@ -1,6 +1,6 @@
 (function (Service, undefined)
 {
-	mapApp.Modules.mapApp.service("mapService", ['$http', '$q', function ($http, $q)
+	mapApp.Modules.mapApp.service("Service", ['$http', '$q', function ($http, $q)
 	{
 		var deferred = $q.defer();
 
