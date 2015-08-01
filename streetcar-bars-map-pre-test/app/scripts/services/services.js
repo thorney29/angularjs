@@ -1,6 +1,6 @@
 (function (Service, undefined)
 {
-	mapApp.Modules.mapApp.service("Service", ['$http', '$q', function ($http, $q)
+	mapApp.Modules.mapApp.service("service", ['$http', '$q', function ($http, $q)
 	{
 		var deferred = $q.defer();
 
@@ -8,7 +8,7 @@
 		{
 			deferred.resolve(data);
 		});
-		this.getPhases = function ()
+		this.getBars = function ()
 		{
 			return deferred.promise;
 		}
