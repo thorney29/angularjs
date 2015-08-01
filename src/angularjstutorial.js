@@ -57,33 +57,34 @@ app.directive('walterwhite', function ()
 	}
 })
 
-.controller('ShieldCtrl', function ($scope)
+.controller('ShieldCtrl', function ($scope) // THis sets up the shieldnames array
 {
-	$scope.shieldNames = [];
+	$scope.shieldNames = []; //this array, which is storing the added names, is put into scope so the directive can read the data outside of the controller.
 
 	this.addReigns = function ()
 	{
-		$scope.shieldNames.push("Roman Reigns: Juggernaut");
+		$scope.shieldNames.push("Roman Reigns: Juggernaut"); //adding each name into an array
 	};
 
 	this.addRollins = function ()
 	{
-		$scope.shieldNames.push("Seth Rollins: Architect");
+		$scope.shieldNames.push("Seth Rollins: Architect"); // this one is added  to array after Reigns
 	};
 
 	this.addAmbrose = function ()
 	{
-		$scope.shieldNames.push("Dean Ambrose: Lunatic Fringe");
+		$scope.shieldNames.push("Dean Ambrose: Lunatic Fringe"); // this one is added  to array after Rollins
 	};
 })
 
-.directive('theshield', function ()
+.directive('theshield', function () //this is the element directive that relies on the ShieldCtrl to pass on the array of names in as attributes 
+	//and binding a mouseover effect to the element to show the names
 {
 	return {
 		restrict: 'E',
-		scope: {},
+		scope: {}, // This protects the scope of the items the action is happening on. Each mouseover is contained to its element
 		controller: 'ShieldCtrl',
-		link: function (scope, element, attrs)
+		link: function (scope, element, attrs) //these are always added
 		{
 			element.bind('mouseenter', function ()
 			{
@@ -93,10 +94,10 @@ app.directive('walterwhite', function ()
 	}
 })
 
-.directive('reigns', function ()
+.directive('reigns', function () // This attribute is nested inside the theshield element and uses the sscope of the ShieldCtrl and theshield directive above
 {
 	return {
-		require: 'theshield',
+		require: 'theshield', 
 		link: function (scope, element, attrs, ShieldCtrl)
 		{
 			ShieldCtrl.addReigns();
@@ -129,17 +130,17 @@ app.directive('walterwhite', function ()
 .directive('interactiveBtn', function ()
 {
 	return {
-		restrict: 'A',
+		restrict: 'E',
 		link: function (scope, element, attrs)
 		{
 			element.bind('mouseenter', function ()
 			{
-				element[0].innerText = "Rolled Over";
+				element[0].innerText = "  Go Green! ";
 			});
 
 			element.bind('mouseleave', function ()
 			{
-				element[0].innerText = "Rolled Out";
+				element[0].innerText = " Go Blue! ";
 			});
 		}
 	}
