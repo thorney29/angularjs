@@ -1,7 +1,7 @@
 (function (Configs, undefined)
 {
 	MCU.Modules.MCU.config(['$routeProvider', function ($routeProvider)
-	{
+	{ 
 		$routeProvider
 			.when('/', {
 				templateUrl: MCU.PartialsPath + '/home.html'

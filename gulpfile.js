@@ -7,11 +7,13 @@ var uglify 			= require('gulp-uglify');
 var runSequence 	= require('run-sequence');
 
 var buildDir 		= 'bin/';
+/** This is all files in the bower_components files **/
 var depsJS 			= ['bower_components/modernizr/modernizr.js',
 					'bower_components/jquery/dist/jquery.min.js',
 					'bower_components/bootstrap/dist/js/bootstrap.min.js',
 					'bower_components/angularjs/angular.min.js',
 					'bower_components/angular-route/angular-route.min.js'];
+/** This is all files in the resources files -  baseline to set up the app module **/
 var appJS 			= ['src/resources/js/general/app.js',
 						'src/resources/js/general/modules.js',
 						'src/resources/js/general/configs.js',
