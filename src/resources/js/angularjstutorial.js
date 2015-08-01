@@ -3,6 +3,6 @@ var app = angular.module('MyApp', []);
 app.controller("MainCtrl", function ($scope)
 {
 	$scope.data = {
-		label: "My Button 2"
+		label: "Click for a different view."
 	};
 });
