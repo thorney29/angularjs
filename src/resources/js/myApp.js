@@ -1,7 +1,20 @@
 /* use strict */
 var app = angular.module('MyApp', []);
 
-app.directive('restrictions', function ()
+app.directive('walterwhite', function ()
+{
+	return {
+		restrict: 'E',
+		//this defines how the template below is summoned on the page -- attribute, element, or class
+		transcude: true, // this means that anytime this is updated it will update itself
+		template: '<h2>I am Heisenberg</h2>' // this is what will be displayed according to this directive
+		// {
+		// 	console.log('I am an attribute');
+		// }
+	}
+})
+
+.directive('restriction', function ()
 {
 	return {
 		restrict: 'A',
@@ -11,7 +24,6 @@ app.directive('restrictions', function ()
 		}
 	}
 })
-
 .directive('elementrest', function ()
 {
 	return {
@@ -133,21 +145,21 @@ app.directive('restrictions', function ()
 	}
 })
 
-.directive('walterwhite', function () 
-{
-	return {
-		restrict: 'E',
-		transclude: true,
-		link: function (scope, element, attrs)
-		{
-			console.log(scope);
-			console.log(element);
-			console.log(attrs);
-		}
-	}
-	/*return {
-		restrict: 'E',
-		transclude: true,
-		template: '<h2>I am Heisenberg</h2>'
-	}*/
-})
+// .directive('walterwhite', function () 
+// {
+// 	return {
+// 		restrict: 'E',
+// 		transclude: true,
+// 		link: function (scope, element, attrs)
+// 		{
+// 			console.log(scope);
+// 			console.log(element);
+// 			console.log(attrs);
+// 		}
+// 	}
+// 	/*return {
+// 		restrict: 'E',
+// 		transclude: true,
+// 		template: '<h2>I am Heisenberg</h2>'
+// 	}*/
+// })
