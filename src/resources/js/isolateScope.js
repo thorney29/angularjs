@@ -9,7 +9,7 @@ app.controller("AppCtrl", function ($scope, $element)
 			' ' + move );
 	}
 
-	$scope.movetypes 	= ['Finisher', 'Offensive Move', 'Defensive Move'];
+	$scope.movetypes 	= ['Karate Specialist', 'Yoga Poser', 'Trained Marine'];
 	$scope.movetype 	= $scope.movetypes[0];
 })
 
@@ -20,8 +20,8 @@ app.controller("AppCtrl", function ($scope, $element)
 		scope: { //these curly braces are the isolate scope
 			name: "@", //this tells this doc that we are passing in the data from the html file
 			image: "@", 
-			movetype: "=", //
-			useMove: '&'
+			movetype: "=", // this tells us that the value in use is coming and out from this file
+			useMove: '&' // 
 		},
 		templateUrl: 'partials/theshield.html', //this is getting your template data from a file not inline.
 		controller: 'AppCtrl'
