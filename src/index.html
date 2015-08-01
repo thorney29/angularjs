@@ -12,14 +12,14 @@
 </head>
 <body>
 	<div class="mainContainer" data-ng-app="MyApp">
-		<div data-ng-controller="MainCtrl">
+		<div data-ng-controller="MainCtrl"> <!--the controller is where all of the behaviors we define can occur (in the scope)-->
 			<h1>AngularJS Tutorial - Binding</h1>
 
-			<input type="text" data-ng-model="data.label">
+			<input type="text" data-ng-model="data.labelInput">
 
 			<input type="text" data-ng-model="data.class">
 
-			<button class="btn {{data.class}}">{{data.label}}</button>
+			<button class="btn {{data.class}}">{{data.labelButton}}</button>
 		</div>
 	</div>
 
