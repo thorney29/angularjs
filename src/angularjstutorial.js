@@ -182,15 +182,15 @@ app.controller("AppCtrl", function ($scope, $element)
 
 .directive("character", function ()
 {
-	return {
+	return { // here is where you will see the isolate scope
 		restrict: 'E',
-		scope: {
-			name: "@",
-			image: "@",
-			movetype: "=",
+		scope: { //these curly braces are the isolate scope
+			name: "@", //this tells this doc that we are passing in the data from the html file
+			image: "@", 
+			movetype: "=", //
 			useMove: '&'
 		},
-		templateUrl: 'partials/shield_isolate.html',
+		templateUrl: 'partials/theshield.html', //this is getting your template data from a file not inline.
 		controller: 'AppCtrl'
 	}
 })
